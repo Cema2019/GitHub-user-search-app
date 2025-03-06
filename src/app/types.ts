@@ -12,3 +12,12 @@ export interface User {
   created_at: string
   avatar_url: string
 }
+
+export interface FormSearchProps {
+  initialUsername: string
+  error: string
+}
+
+export interface UserCardProps {
+  user: User
+}
