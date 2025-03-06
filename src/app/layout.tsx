@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
-// import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-// const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <body className={spaceGrotesk.className}> */}
       <body className={robotoMono.className}>
         <div className="p-x-4 grid place-content-center min-h-screen bg-blue-950">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
