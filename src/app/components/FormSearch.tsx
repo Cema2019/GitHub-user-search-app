@@ -1,8 +1,26 @@
+'use client'
+import { FormSearchProps } from '../types';
 import SearchIcon from "./icons/SearchIcon";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-const FormSearch = () => {
+const FormSearch = ({ 
+  initialUsername, 
+  error 
+}: FormSearchProps) => {
+
+const [username, setUsername] = useState(initialUsername)
+  const router = useRouter()
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    router.push(`/?username=${encodeURIComponent(username)}`)
+  }
+
     return (
-        <form className="mb-6 flex flex-wrap items-center gap-2 bg-blue-900 p-4 rounded-xl">
+        <form 
+        onSubmit={handleSubmit}
+        className="mb-6 flex flex-wrap items-center gap-2 bg-blue-900 p-4 rounded-xl">
             <span className="min-w-[20px]">
                 <SearchIcon className="fill-sky-500" />
             </span>
