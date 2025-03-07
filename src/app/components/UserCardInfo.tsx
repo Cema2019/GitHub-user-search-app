@@ -46,13 +46,13 @@ const UserCardInfo = ({ user }: UserCardProps) => {
             <div className="section-social md:grid grid-cols-2 mt-4 space-y-3">
                 <article className="flex space-x-2">
                     <i>
-                        <LocationIcon className="fill-white w-full h-full" width="1rem" />
+                        <LocationIcon className="fill-white w-[1.2rem] h-[1.2rem]"/>
                     </i>
                     <p>{user.location || 'Not available'}</p>
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <LinkIcon className="fill-white w-full h-full" width="1rem" />
+                        <LinkIcon className="fill-white w-[1.2rem] h-[1.2rem]" />
                     </i>
                     <p>
                         {user.blog ? (
@@ -64,13 +64,13 @@ const UserCardInfo = ({ user }: UserCardProps) => {
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <TwitterIcon className="fill-white w-full h-full" width="1rem" />
+                        <TwitterIcon className="fill-white w-[1.2rem] h-[1.5rem]" />
                     </i>
                     <p>{user.twitter_username || 'Not available'}</p>
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <BuildingIcon className="fill-white w-full h-full" width="1rem" />
+                        <BuildingIcon className="fill-white w-[1.2rem] h-[1.2rem]" />
                     </i>
                     <p>{user.company || 'Not available'}</p>
                 </article>
