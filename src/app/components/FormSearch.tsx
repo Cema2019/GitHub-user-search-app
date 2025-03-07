@@ -28,6 +28,8 @@ const [username, setUsername] = useState(initialUsername)
                 className="flex-1 h-14 p-2 rounded-lg bg-transparent text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
                 type="text"
                 placeholder="Search github username..."
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
             ></input>
             <button className="bg-sky-500 rounded-lg py-4 px-4 text-white font-bold">
                 Search

@@ -1,4 +1,3 @@
-import GithubLogo from "./icons/GithubIcon";
 import LocationIcon from "./icons/LocationIcon";
 import LinkIcon from "./icons/LinkIcon";
 import TwitterIcon from "./icons/TwitterIcon";
