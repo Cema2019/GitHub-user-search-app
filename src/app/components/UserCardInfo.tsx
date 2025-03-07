@@ -55,8 +55,8 @@ const UserCardInfo = ({ user }: UserCardProps) => {
                     </i>
                     <p>
                         {user.blog ? (
-                            <a href={user.blog} target="_blank" rel="noopener noreferrer">
-                                {user.blog}
+                            <a href={user.blog.startsWith('http') ? user.blog : `https://${user.blog}`} target="_blank" rel="noopener noreferrer">
+                                {user.blog.replace(/^(https?:\/\/)?(www\.)?/i, '').split('/')[0]}
                             </a>
                         ) : 'Not available'}
                     </p>
