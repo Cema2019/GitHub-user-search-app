@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <header className="flex items-center space-x-2 mb-10">
-      <h1 className="text-3xl font-bold text-white flex-grow">devfinder</h1>
+      <h1 className="text-3xl font-bold flex-grow">devfinder</h1>
       <div className="flex items-center gap-2">
         <span className="uppercase text-slate-600 dark:text-white">
           {theme === "light" ? "Light" : "Dark"}
