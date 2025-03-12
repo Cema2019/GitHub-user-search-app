@@ -12,8 +12,8 @@ const UserCardInfo = ({ user }: UserCardProps) => {
     }).format(new Date(user.created_at));
 
     return (
-        <article className="grid-areas bg-blue-900 p-4 rounded-xl text-white">
-            <div className="section-logo bg-gray-200 p-1 grid place-content-center rounded-full h-24 w-24 mr-3 lg:mx-auto">
+        <article className="grid-areas bg-blue-200 dark:bg-blue-900 p-4 rounded-xl text-slate-900 dark:text-white">
+            <div className="section-logo bg-blue-100 dark:bg-blue-950 p-1 grid place-content-center rounded-full h-24 w-24 mr-3 lg:mx-auto">
                 <img 
                     src={user.avatar_url} 
                     alt={user.name || user.login}
@@ -28,7 +28,7 @@ const UserCardInfo = ({ user }: UserCardProps) => {
             <p className="section-description mt-8 leading-loose">
                 {user.bio || 'No bio available'}
             </p>
-            <div className="section-number flex justify-around bg-blue-950 mt-4 p-8 rounded-xl text-center">
+            <div className="section-number flex justify-around bg-blue-100 dark:bg-blue-950 mt-4 p-8 rounded-xl text-center">
                 <article>
                     <p>Repos</p>
                     <p className="font-bold text-xl">{user.public_repos}</p>
@@ -45,13 +45,13 @@ const UserCardInfo = ({ user }: UserCardProps) => {
             <div className="section-social md:grid grid-cols-2 mt-4 space-y-3">
                 <article className="flex space-x-2">
                     <i>
-                        <LocationIcon className="fill-white w-[1.2rem] h-[1.2rem]"/>
+                        <LocationIcon className="fill-slate-900 dark:fill-white w-[1.2rem] h-[1.2rem]"/>
                     </i>
                     <p>{user.location || 'Not available'}</p>
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <LinkIcon className="fill-white w-[1.2rem] h-[1.2rem]" />
+                        <LinkIcon className="fill-slate-900 dark:fill-white w-[1.2rem] h-[1.2rem]" />
                     </i>
                     <p>
                         {user.blog ? (
@@ -63,13 +63,13 @@ const UserCardInfo = ({ user }: UserCardProps) => {
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <TwitterIcon className="fill-white w-[1.2rem] h-[1.5rem]" />
+                        <TwitterIcon className="fill-slate-900 dark:fill-white w-[1.2rem] h-[1.5rem]" />
                     </i>
                     <p>{user.twitter_username || 'Not available'}</p>
                 </article>
                 <article className="flex space-x-2">
                     <i>
-                        <BuildingIcon className="fill-white w-[1.2rem] h-[1.2rem]" />
+                        <BuildingIcon className="fill-slate-900 dark:fill-white w-[1.2rem] h-[1.2rem]" />
                     </i>
                     <p>{user.company || 'Not available'}</p>
                 </article>
