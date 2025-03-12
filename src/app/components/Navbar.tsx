@@ -22,7 +22,7 @@ const Navbar = () => {
           {theme === 'light' ? (
             <SunIcon className="fill-slate-600 dark:fill-white" width={25} />
           ) : (
-            <MoonIcon className="fill-slate-600 dark:fill-white" width={25} />
+            <MoonIcon className="fill-slate-600 dark:fill-white" width={15} />
           )}
         </button>
       </div>
