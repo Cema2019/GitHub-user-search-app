@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --page-bg: 241 245 249; 
+  }
+  .dark {
+    --page-bg: 25 0 51;   
+  }
+}
+
 .grid-areas {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;

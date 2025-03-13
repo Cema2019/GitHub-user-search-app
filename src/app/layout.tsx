@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={robotoMono.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <div className="p-x-4 grid place-content-center min-h-screen bg-slate-100 dark:bg-blue-950">
+        <div className="p-x-4 grid place-content-center min-h-screen bg-page">
           <div className="sm:w-[500px] md:w-[600px] lg:w-[700px]">
             <Navbar />
             {children}
