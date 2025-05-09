@@ -20,14 +20,14 @@ const useDebounce = <T,>(value: T, delay: number): T => {
   return debouncedValue;
 };
 
-const SearchBar = ({ 
-  initialUsername, 
-  error 
+const SearchBar = ({
+  initialUsername,
+  error
 }: FormSearchProps) => {
 
-const [username, setUsername] = useState(initialUsername);
-const router = useRouter();
-const debouncedUsername = useDebounce(username, 500);
+  const [username, setUsername] = useState(initialUsername);
+  const router = useRouter();
+  const debouncedUsername = useDebounce(username, 500);
 
   useEffect(() => {
     if (debouncedUsername) {
@@ -36,8 +36,8 @@ const debouncedUsername = useDebounce(username, 500);
   }, [debouncedUsername, router]);
 
 
-    return (
-        <div className="mb-6 flex flex-wrap items-center gap-2 bg-blue-200 dark:bg-blue-900 p-4 rounded-xl">
+  return (
+    <div className="mb-6 flex flex-wrap items-center gap-2 bg-blue-200 dark:bg-blue-900 p-4 rounded-xl">
       <span className="min-w-[20px]">
         <SearchIcon className="fill-sky-500 dark:fill-sky-400" />
       </span>
@@ -48,7 +48,8 @@ const debouncedUsername = useDebounce(username, 500);
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
+      {error && <p className="text-red-500 text-center mt-2 text-sm font-medium w-full">{error}</p>}
     </div>
-    );
+  );
 };
 export default SearchBar;
