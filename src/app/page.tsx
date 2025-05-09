@@ -1,4 +1,4 @@
-import FormSearch from "./components/FormSearch";
+import FormSearch from "./components/SearchBar";
 import UserCardInfo from "./components/UserCardInfo";
 import { User, FormSearchProps } from './types'
 

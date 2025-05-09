@@ -20,7 +20,7 @@ const useDebounce = <T,>(value: T, delay: number): T => {
   return debouncedValue;
 };
 
-const FormSearch = ({ 
+const SearchBar = ({ 
   initialUsername, 
   error 
 }: FormSearchProps) => {
@@ -51,4 +51,4 @@ const debouncedUsername = useDebounce(username, 500);
     </div>
     );
 };
-export default FormSearch;
+export default SearchBar;
