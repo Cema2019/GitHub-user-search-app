@@ -25,13 +25,16 @@ const FormSearch = ({
   error 
 }: FormSearchProps) => {
 
-const [username, setUsername] = useState(initialUsername)
-  const router = useRouter()
+const [username, setUsername] = useState(initialUsername);
+const router = useRouter();
+const debouncedUsername = useDebounce(username, 500);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    router.push(`/?username=${encodeURIComponent(username)}`)
-  }
+  useEffect(() => {
+    if (debouncedUsername) {
+      router.push(`/?username=${encodeURIComponent(debouncedUsername)}`);
+    }
+  }, [debouncedUsername, router]);
+
 
     return (
         <form 
